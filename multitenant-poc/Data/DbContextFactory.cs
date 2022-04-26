@@ -1,10 +1,10 @@
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Multitenant.Models;
-using MultiTenant.Data.Interfaces;
+using multitenant_poc.Models;
+using multitenant_poc.Data.Interfaces;
 
-namespace Multitenant.Data
+namespace multitenant_poc.Data
 {
     public class DbContextFactory : IDbContextFactory
     {
@@ -15,4 +15,6 @@ namespace Multitenant.Data
             return new ApplicationDbContext(dbContextOptionsBuilder.Options, configuration, tenant);
         }
     }
+
+
 }
